@@ -23,8 +23,8 @@ def downloadvideo():
         Openlocation()
 
     choice = ytchoice.get()
-    url = ytEntryVar.get()
-
+    url = ytEntry.get()
+    ytEntry.delete(0 , END)
     # print(url)
     
     if(len(url) > 1):
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     root = Tk()
     root.title("Youtube Downloader")
-    root.geometry("400x450") #Sets Window
+    root.geometry("450x450") #Sets Window
     root.minsize(450,450)
     root.maxsize(450,450)
     root.columnconfigure(0 , weight=1) #Set all content center
@@ -79,8 +79,7 @@ if __name__ == "__main__":
     URLlabel.place(x = 36 , y = 20)
 
     # Entry Box
-    ytEntryVar = StringVar()
-    ytEntry = Entry(root , font = ("calibri",15) , fg= '#3d405b', bg= '#e9edc9' ,textvariable=ytEntryVar)
+    ytEntry = Entry(root , font = ("calibri",15) , fg= '#3d405b', bg= '#e9edc9')
     ytEntry.place(x = 72 , y = 80 , width=300 , height=30)
 
     #Asking Save file Label
@@ -93,7 +92,7 @@ if __name__ == "__main__":
 
     #Error Message for not choosing location
     locationError = Label(root , text="",fg="red",font=('calibri',10) , bg='#eae2b7')
-    locationError.place(x = 160 , y = 225)
+    locationError.place(x = 135 , y = 225)
 
     #Download Quality
     ytQuality = Label(root ,text="Select Quality",font=("calibri",18,"bold") , bg='#eae2b7')
