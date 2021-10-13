@@ -9,7 +9,7 @@
         <li>To Run on your System you should install python first (Latest Version is recommended).</li>
         <li>Next install all the requirements using this command on you'r terminal pip3 install -r requirements.txt</li>
         <br>
-        <li>Steps To download :- <li>
+        Steps To download :-
         <br>
         <ul>
             <li>Run the main.py file</li>
